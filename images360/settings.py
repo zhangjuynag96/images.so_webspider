@@ -27,7 +27,7 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 5
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -89,16 +89,14 @@ ROBOTSTXT_OBEY = False
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-
+#TYPE_ID is an image type keyword
+TYPE_ID = 603
+#MAX_PAGE is the maximum number of pages crawled by a single class
 MAX_PAGE = 50
-
+#MongoDb Settings
 MONGO_URI = 'localhost'
-
 MONGO_DB = 'images360'
 
-IMAGES_STORE = './images'
-
 ITEM_PIPELINES = {
-    'images360.pipelines.ImagePipeline':360,
     'images360.pipelines.MongoPipeline':301,
 }

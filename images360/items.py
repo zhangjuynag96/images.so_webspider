@@ -14,3 +14,4 @@ class ImageItem(Item):
     url = Field()
     title = Field()
     thumb = Field()
+    gid = Field()
